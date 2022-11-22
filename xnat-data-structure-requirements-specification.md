@@ -16,7 +16,7 @@ Describes how non-raw DICOM data is organized in your project and what the files
  
 
 ### Roles: 
-* Data user: for instance, a researcher consuming scan data to derive Quantitative Imaging Biomarkers
+* Data user: for instance, a researcher consuming scan data to derive [Quantitative Imaging Biomarkers](https://en.wikipedia.org/wiki/Imaging_biomarker)
 * Data controller: for instance, a clinical research PI having a data collection to share with others 
 
  
