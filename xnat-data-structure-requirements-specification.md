@@ -14,7 +14,7 @@ expose this structure through the API to be used with tooling like
 
 The XNAT medical image storage solution has defined a data structure for
 medical imaging data. This is following the concepts/levels of `project`,
-`subject`, `experiment`, `scan`, and `resource`. This gives the data it's
+`subject`, `experiment`, `scan`, and `resource`. This gives the data its
 general structure. The names of each level and the contents are not
 pre-defined. This allows flexibility for users to store any kind of data in
 the archive and match their use-case, but also makes the data hard to interpret
@@ -89,7 +89,7 @@ As a data user I want: 
 * To find the T1w scan because I want to extract information from it 
 * To know where and how to store the output of my image analysis workflow, 
   so I and others can find it later 
-* To know what information is stored in this file “ambigousfile.extension” 
+* To know what information is stored in this file “ambiguousfile.extension” 
   because it might contain relevant information for my research 
 * To know how many patients have a T1w scan with a fully annotated brain 
   segmentation by observer Radiologist 1 to extract information from it 
