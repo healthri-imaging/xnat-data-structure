@@ -4,11 +4,12 @@
 
 ...
 
-**Goal**: give a structured description and insight in how non-raw DICOM
-and non-DICOM data (e.g., converted DICOM, segmentations, derived data) 
-in a project is structured, what the files contain, and allow users to
-expose this structure through the API to be used with tooling like 
-[xnatpy](https://xnat.rtfd.io). 
+**Goal**: give a structured description and insight in how data in a 
+project is organised. This can include raw DICOM, non-raw DICOM
+and non-DICOM data (e.g., converted DICOM, segmentations, derived data).
+The structure description defines how the files are organised and what they
+contain. This allows users to access data in a structured through an API to
+be used with tooling like [xnatpy](https://xnat.rtfd.io). 
 
 ## Motivation
 
@@ -28,23 +29,36 @@ for each project on XNAT, which describes what data is available for that
 project.
 
 Such a file will not only allow people to immediately know what data is in a 
-project, but also allow the creation of tools to help with data-management. 
-These tools could include tools to validate data, select and process data, 
-storing data under the right place automatically and more.
+project, but also allow the creation of tools to help with data-management.
+Effectively we are creating a meta-data definition with which tools can be
+created to validate data, select and process data, storing data under the 
+right place automatically and more. Additionally, this meta-data definition
+allows for easy reporting to catalogs (e.g. the Health-RI catalog) 
+automatically.
 
 ## Impact
 
-The choice for a data-structure file to improve the data structure in XNAT is
-inspired by limiting the negative impact on users, while allowing for the 
-advantages via opt-in.
+The proposal will help to create meta-data definitions. The choice for a
+data-structure file to is to make the use of it optional. This avoids negative
+impact on existing users, while allowing for the advantages via opt-in:
 
-* This proposal will only add optional functionality and not hamper existing
-  users in any way. They will only be affected if they opt in to use the
-  data-structure file.
+* The data structure file will not be a requirement for projects in XNAT but we
+  want to strongly encourage people collecting and/or generating data to use 
+  this file for Findability and Interoperability of their data. However, if
+  users choose not to add a data structure file, they will not be affected in 
+  any way.
 * Projects with a data-structure file will have:
-  * their data described in a way that is both human and machine-readable
-  * be able to use any tools implementing this definition
-  * be (more) FAIR
+  * have its data described in a way that is both human and machine-readable
+  * be able to benefit from tooling that will make data management more 
+    consistent and less error-prone
+  * have happy data-managers: managing the data will be more straight-forward 
+    and give data structure documentation at their fingertips
+  * have happy data users: they know what can expect and spend less time 
+    data-munging
+  * have Findable data by default
+
+This improves all aspects of the FAIR principles, making a huge step towards 
+truly FAIR data.
 
 ### General  planning
 
