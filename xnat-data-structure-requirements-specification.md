@@ -74,7 +74,10 @@ are set:
 2. Draft data-structure file specification until 2023-03-01
 3. Define xnatpy data-access interface and tests cases until 2023-05-01
 4. Implement data-access interface until 2023-06-01
->> are testing and first uses not part of this timeline? Maybe add?
+5. Internal user testing and processing feedback until 2023-08-01
+6. External user testing and processing feedback until 2023-10-01
+7. Creating of first tools using data-structure file 2024-01-01
+8. Release of 1.0 in January 2024
 
  
 ### Introduction: Structure File Concept 
@@ -90,7 +93,7 @@ files mean/contain. 
 ### Roles: 
 * Data user: for instance, a researcher consuming scan data to derive
 * [Quantitative Imaging Biomarkers](https://en.wikipedia.org/wiki/Imaging_biomarker)
-* Data holder <>>data holder is the term that we use withing the Health-RI architecture team>: for instance, a clinical research PI having a data
+* Data holder: for instance, a clinical research PI having a data
 * collection to share with others 
 
  
