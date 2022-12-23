@@ -8,7 +8,7 @@
 project is organised. This can include raw DICOM, non-raw DICOM
 and non-DICOM data (e.g., converted DICOM, segmentations, derived data).
 The structure description defines how the files are organised and what they
-contain. This allows users to access data in a structured through an API to
+contain. This allows users to access data in a structured way through an API to
 be used with tooling like [xnatpy](https://xnat.rtfd.io). 
 
 ## Motivation
@@ -29,17 +29,17 @@ for each project on XNAT, which describes what data is available for that
 project.
 
 Such a file will not only allow people to immediately know what data is in a 
-project, but also allow the creation of tools to help with data-management.
+project, but also allows to automate data management using scripts.
 Effectively we are creating a meta-data definition with which tools can be
-created to validate data, select and process data, storing data under the 
-right place automatically and more. Additionally, this meta-data definition
+created to, for example, automatically validate data, select and process data, 
+and store data in the right place. Additionally, this meta-data definition
 allows for easy reporting to catalogs (e.g. the Health-RI catalog) 
 automatically.
 
 ## Impact
 
-The proposal will help to create meta-data definitions. The choice for a
-data-structure file to is to make the use of it optional. This avoids negative
+The proposal will help to create meta-data definitions. The advantage of a
+data-structure file is that it allows for optional usage. This avoids negative
 impact on existing users, while allowing for the advantages via opt-in:
 
 * The data structure file will not be a requirement for projects in XNAT but we
@@ -47,7 +47,7 @@ impact on existing users, while allowing for the advantages via opt-in:
   this file for Findability and Interoperability of their data. However, if
   users choose not to add a data structure file, they will not be affected in 
   any way.
-* Projects with a data-structure file will have:
+* Projects with a data-structure file will:
   * have its data described in a way that is both human and machine-readable
   * be able to benefit from tooling that will make data management more 
     consistent and less error-prone
@@ -62,7 +62,7 @@ truly FAIR data.
 
 ### General  planning
 
-The development of the XNAT data structure file project will be in an on 
+The development of the XNAT data structure file project will be in an 
 open fashion. The aim is to use a test-driven development approach, where
 we first defined requirements, then the desired interface, then create tests, 
 and finally implement code to satisfy all defined requirements and tests.
@@ -74,7 +74,7 @@ are set:
 2. Draft data-structure file specification until 2023-03-01
 3. Define xnatpy data-access interface and tests cases until 2023-05-01
 4. Implement data-access interface until 2023-06-01
-
+>> are testing and first uses not part of this timeline? Maybe add?
 
  
 ### Introduction: Structure File Concept 
@@ -90,7 +90,7 @@ files mean/contain. 
 ### Roles: 
 * Data user: for instance, a researcher consuming scan data to derive
 * [Quantitative Imaging Biomarkers](https://en.wikipedia.org/wiki/Imaging_biomarker)
-* Data controller: for instance, a clinical research PI having a data
+* Data holder <>>data holder is the term that we use withing the Health-RI architecture team>: for instance, a clinical research PI having a data
 * collection to share with others 
 
  
@@ -113,7 +113,7 @@ As a data user I want: 
 * To know whether a certain scan session is pre-operative or post-operative 
 * To easily be able to upload a folder structure with derived files to my project  
 
-As a data controller I want: 
+As a data holder I want: 
 * Define the structure of my data collection, so it is easy to share it
   with others 
 * Define the structure of my data collection, so I can collect summary 
